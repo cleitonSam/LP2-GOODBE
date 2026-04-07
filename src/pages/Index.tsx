@@ -19,14 +19,8 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* HEADER */}
       <header className="absolute top-0 left-0 w-full z-50 p-4 md:p-6">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto">
           <img src="gb_encurtado.png" alt="Goodbe Logo" className="h-8 md:h-10" />
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="bg-secondary text-white font-black px-4 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wider hover:scale-105 transition-transform"
-          >
-            Agende sua experiência
-          </button>
         </div>
       </header>
 
