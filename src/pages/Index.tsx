@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Infinity as InfinityIcon, Barbell, HandHeart, DeviceMobile } from '@phosphor-icons/react';
 import VideoSection from '../components/VideoSection';
 import LeadModal from '../components/LeadModal';
 import FloatingCTA from '../components/FloatingCTA';
@@ -19,10 +20,10 @@ const Index = () => {
       {/* HEADER */}
       <header className="absolute top-0 left-0 w-full z-50 p-4 md:p-6">
         <div className="container mx-auto flex justify-between items-center">
-          <img src="goodbe seu centro de bem estar.png" alt="Goodbe Logo" className="h-8 md:h-10" />
+          <img src="gb_encurtado.png" alt="Goodbe Logo" className="h-8 md:h-10" />
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-cta text-primary font-black px-4 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wider hover:scale-105 transition-transform"
+            className="bg-secondary text-white font-black px-4 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wider hover:scale-105 transition-transform"
           >
             Agende sua experiência
           </button>
@@ -30,40 +31,60 @@ const Index = () => {
       </header>
 
       <main>
-        {/* HERO SECTION */}
-        <section className="relative min-h-[100vh] md:min-h-[95vh] flex items-center justify-center overflow-hidden bg-primary">
-          <div className="absolute inset-0 z-0 hidden md:block">
-            <iframe
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-full min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-40 scale-110"
-              src="https://www.youtube.com/embed/3K21LzVNS-U?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=3K21LzVNS-U&modestbranding=1&iv_load_policy=3"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-            ></iframe>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/60 to-white md:from-primary/80 md:via-primary/40 z-[1]"></div>
-
-          {/* Decorative Pattern Overlay */}
-          <div className="absolute inset-0 z-[2] opacity-[0.03] md:opacity-5 pointer-events-none" style={{ backgroundImage: 'url(gb_element.png)', backgroundSize: '200px md:300px' }}></div>
-
-          <div className="container mx-auto relative z-[10] px-6 md:px-4 text-center">
-            <h1 className="text-3xl md:text-7xl font-black text-white mb-4 md:mb-6 leading-[1.15]">
-              Goodbe.
-              <br />
-              <span className="text-cta italic">
-                Um novo jeito de cuidar
-                <br />
-                do corpo e da mente.
-              </span>
-            </h1>
-            <p className="text-base md:text-xl text-white/80 mb-8 md:mb-10 max-w-lg md:max-w-3xl mx-auto font-medium leading-relaxed">
-              Onde o cuidado começa no corpo e termina na mente. Esqueça a rotina engessada e o ambiente que assusta. Aqui, você faz no seu tempo, sem pressão.
-            </p>
+        {/* HERO BANNER */}
+        <section className="relative w-full min-h-[50vw] md:min-h-0">
+          <img
+            src="banner-hero.png"
+            alt="Goodbe - Um novo jeito de cuidar do corpo e da mente"
+            className="w-full h-full md:h-auto object-cover object-[25%_center] md:object-center"
+          />
+          {/* CTA overlay no banner */}
+          <div className="absolute bottom-3 sm:bottom-4 md:bottom-[12%] lg:bottom-[13%] left-0 w-full flex justify-center md:justify-start md:pl-[20%] z-10 px-4 md:px-0">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-cta text-primary font-black uppercase tracking-widest px-8 md:px-10 py-4 md:py-5 rounded-2xl hover:scale-105 transition-all shadow-[0_0_50px_rgba(217,255,13,0.3)] text-sm md:text-base"
+              className="bg-cta text-primary font-black uppercase tracking-wider md:tracking-widest px-5 sm:px-6 md:px-10 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl hover:scale-105 transition-all shadow-lg text-[10px] sm:text-xs md:text-base whitespace-nowrap"
             >
               Agende sua primeira experiência
             </button>
+          </div>
+        </section>
+
+        {/* DIFERENCIAIS SECTION */}
+        <section className="py-14 md:py-20 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-6 md:px-4">
+            <h2 className="text-2xl md:text-4xl font-black text-primary text-center mb-10 md:mb-14">
+              O Diferencial que você procurava.
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6 max-w-5xl mx-auto">
+              <div className="text-center px-2">
+                <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 flex items-center justify-center text-secondary">
+                  <InfinityIcon size={48} weight="duotone" />
+                </div>
+                <h3 className="font-black text-primary text-sm md:text-base mb-1.5">Ilimitado Real</h3>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">Treine o <strong className="text-primary">quanto quiser</strong>, sem taxas escondidas.</p>
+              </div>
+              <div className="text-center px-2">
+                <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 flex items-center justify-center text-secondary">
+                  <Barbell size={48} weight="duotone" />
+                </div>
+                <h3 className="font-black text-primary text-sm md:text-base mb-1.5">Método Integrado</h3>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">O melhor do Pilates, Yoga e Funcional no <strong className="text-primary">mesmo plano</strong>.</p>
+              </div>
+              <div className="text-center px-2">
+                <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 flex items-center justify-center text-secondary">
+                  <HandHeart size={48} weight="duotone" />
+                </div>
+                <h3 className="font-black text-primary text-sm md:text-base mb-1.5">Sem Pressão</h3>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">Um ambiente focado em <strong className="text-primary">bem-estar</strong>, não em padrões estéticos.</p>
+              </div>
+              <div className="text-center px-2">
+                <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 flex items-center justify-center text-secondary">
+                  <DeviceMobile size={48} weight="duotone" />
+                </div>
+                <h3 className="font-black text-primary text-sm md:text-base mb-1.5">Conveniência</h3>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">Agende tudo pelo nosso App e treine <strong className="text-primary">no seu tempo</strong>.</p>
+              </div>
+            </div>
           </div>
         </section>
 
