@@ -63,7 +63,7 @@ const Index = () => {
                   <Leaf size={48} weight="duotone" />
                 </div>
                 <h3 className="font-black text-primary text-sm md:text-base mb-1.5">Método Integrado</h3>
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">O melhor do Pilates, Yoga, Funcional e Ritmos no <strong className="text-primary">mesmo plano</strong>.</p>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">Pilates, Yoga, Funcional e Ritmos no <strong className="text-primary">mesmo plano</strong>.</p>
               </div>
               <div className="text-center px-2">
                 <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 flex items-center justify-center text-secondary">
