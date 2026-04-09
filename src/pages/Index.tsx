@@ -27,17 +27,20 @@ const Index = () => {
 
       <main>
         {/* HERO BANNER */}
-        <section className="relative w-full min-h-[50vw] md:min-h-0">
-          <img
-            src="banner-hero.png"
-            alt="Goodbe - Um novo jeito de cuidar do corpo e da mente"
-            className="w-full h-full md:h-auto object-cover object-[25%_center] md:object-center"
-          />
-          {/* CTA overlay no banner */}
-          <div className="absolute bottom-3 sm:bottom-4 md:bottom-[12%] lg:bottom-[13%] left-0 w-full flex justify-center md:justify-start md:pl-[20%] z-10 px-4 md:px-0">
+        <section className="relative w-full">
+          {/* Mobile: banner com altura fixa e crop inteligente */}
+          <div className="relative w-full h-[60vw] sm:h-[50vw] md:h-auto overflow-hidden">
+            <img
+              src="banner-hero.png"
+              alt="Goodbe - Um novo jeito de cuidar do corpo e da mente"
+              className="w-full h-full md:h-auto object-cover object-[30%_20%] md:object-center"
+            />
+          </div>
+          {/* Mobile: botão abaixo do banner / Desktop: sobreposto */}
+          <div className="flex justify-center py-4 md:py-0 md:absolute md:bottom-[12%] lg:bottom-[13%] md:left-0 md:w-full md:justify-start md:pl-[20%] z-10 px-4 md:px-0">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-cta text-primary font-black uppercase tracking-wider md:tracking-widest px-5 sm:px-6 md:px-10 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl hover:scale-105 transition-all shadow-lg text-[10px] sm:text-xs md:text-base whitespace-nowrap"
+              className="bg-cta text-primary font-black uppercase tracking-wider md:tracking-widest px-6 md:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl hover:scale-105 transition-all shadow-lg text-xs md:text-base whitespace-nowrap"
             >
               Agende sua primeira experiência
             </button>
@@ -45,9 +48,9 @@ const Index = () => {
         </section>
 
         {/* DIFERENCIAIS SECTION */}
-        <section className="py-14 md:py-20 bg-white border-b border-gray-100">
+        <section className="py-10 md:py-20 bg-white border-b border-gray-100">
           <div className="container mx-auto px-6 md:px-4">
-            <h2 className="text-2xl md:text-4xl font-black text-primary text-center mb-10 md:mb-14">
+            <h2 className="text-xl md:text-4xl font-black text-primary text-center mb-8 md:mb-14">
               O Diferencial que você procurava.
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6 max-w-5xl mx-auto">
