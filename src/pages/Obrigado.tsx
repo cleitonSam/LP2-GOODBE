@@ -11,8 +11,7 @@ declare global {
 const Obrigado = () => {
   const navigate = useNavigate();
   const WHATSAPP_NUMBER = "551125772860"; // Número atualizado (11) 2577-2860
-  // Mensagem corrigida: "Giro" em vez de "Gire"
-  const WHATSAPP_MESSAGE = "Oi%2C%20acabei%20de%20me%20cadastrar%20no%20Giro%20que%20faz%20bem%20e%20quero%20garantir%20meu%20benef%C3%ADcio%21"; // URL‑encoded
+  const WHATSAPP_MESSAGE = encodeURIComponent("Oi! Vim pela Landing Page do Goodbe One e quero agendar minha primeira experiência.");
 
   useEffect(() => {
     if (typeof window.gtag === 'function') {
