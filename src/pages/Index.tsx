@@ -21,7 +21,7 @@ const Index = () => {
       {/* HEADER */}
       <header className="absolute top-0 left-0 w-full z-50 p-4 md:p-6">
         <div className="container mx-auto">
-          <img src="gb_encurtado.png" alt="Goodbe Logo" className="h-8 md:h-10" />
+          <img src="goodbe seu centro de bem estar.png" alt="Goodbe Logo" className="h-8 md:h-10" />
         </div>
       </header>
 
